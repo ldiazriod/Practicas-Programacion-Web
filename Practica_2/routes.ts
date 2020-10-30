@@ -1,9 +1,9 @@
 import {Router} from "http://deno.land/x/oak/mod.ts";
-import {mainApi} from "../NewServer/src/mainApi.ts";
+import {mainApi} from "../Practica_2/src/mainApi.ts";
 import { v4 } from 'https://deno.land/std/uuid/mod.ts';
-import {takeChar, takeCharById, deleteCharById, switchStatus} from "../NewServer/src/newCharacters.ts";
-import {takeEpi, takeEpiById} from "../NewServer/src/newEpisode.ts";
-import {takeLoc, takeLocById} from "../NewServer/src/newLocation.ts";
+import {takeChar, takeCharById, deleteCharById, switchStatus} from "../Practica_2/src/newCharacters.ts";
+import {takeEpi, takeEpiById} from "../Practica_2/src/newEpisode.ts";
+import {takeLoc, takeLocById} from "../Practica_2/src/newLocation.ts";
 
 const router = new Router();
 router.get("/", mainApi);

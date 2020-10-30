@@ -1,6 +1,6 @@
 import { MongoClient } from "https://deno.land/x/mongo@v0.12.1/mod.ts";
 import "https://deno.land/x/dotenv/load.ts";
-import type {myCharacters, myEpisodes, myLocations} from "../NewServer/mySchemas.ts";
+import type {myCharacters, myEpisodes, myLocations} from "../Practica_2/mySchemas.ts";
 
 const DB_URL = Deno.env.get("DB_URL");
 const DB_NAME = Deno.env.get("DB_NAME");
