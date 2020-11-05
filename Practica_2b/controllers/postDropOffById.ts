@@ -14,7 +14,7 @@ const postDropOffId = async (ctx: IContext) => {
         if(journey){
             const findCar = await CarCollection.findOne({client: journey.id})
             if(findCar){
-                const {matchedCount} = await CarCollection.updateOne({id: findCar.id}, {$set: {client: 0 }})
+                const {matchedCount} = await CarCollection.updateOne({id: findCar.id}, {$set: {client: 0}})
                 const deleteClient = await PeopleCollection.deleteOne({id: journey.id})
                 if(matchedCount){
                     ctx.response.status = 204;

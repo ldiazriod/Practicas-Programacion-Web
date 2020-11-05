@@ -7,7 +7,6 @@ const postLocateById = async (ctx: IContext) => {
         const db: Database = ctx.state.db;
         const CarCollection = db.collection<CarsSchema>("CarCollection")
         const PeopleCollection = db.collection<PeopleSchema>("PeopleCollection")
-    
         const { id } = helpers.getQuery(ctx, {mergeParams: true});
         const client = await PeopleCollection.findOne({id: Number(id)});
 
@@ -24,11 +23,9 @@ const postLocateById = async (ctx: IContext) => {
             ctx.response.status = 404;
             ctx.response.body = "Not found"
         }
-
     }catch(e){
         ctx.response.status = 500;
         ctx.response.body = `Unexpected Error: ${e.message}`;
     }
 }
-
 export {postLocateById}

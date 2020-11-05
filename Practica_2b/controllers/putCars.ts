@@ -13,11 +13,10 @@ const putCar = async (ctx: IContext) => {
        const auxId: number[] = [];
 
        if(carArray){
-           const result = carArray.map(async (elem) => {
+           const result = carArray.map((elem) => {
                if(((elem.seats as number) < 4) || ((elem.seats as number) > 6) || (elem.seats === undefined)){
                    badRequest = true;
                }
-
                if(elem.id !== undefined){
                 if(auxId.length === 0){
                     auxId.push((elem.id as number))
@@ -57,11 +56,9 @@ const putCar = async (ctx: IContext) => {
            ctx.response.status = 400;
            ctx.response.body = "Bad Request"
        }
-
     }catch(e){
         ctx.response.status = 500;
         ctx.response.body = `Unexpected Error: ${e.message}`;
     }
 }
-
 export {putCar};
