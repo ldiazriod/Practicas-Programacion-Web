@@ -13,7 +13,7 @@ const postClient = async (ctx: IContext) => {
 
         if(newClient){
             const search = await clientCollection.findOne({cif: newClient.cif})
-            if(search){
+            if(search && (newClient.address === undefined )){
                 ctx.response.status = 400;
                 ctx.response.body = "Bad Request"
             }else{
