@@ -9,6 +9,7 @@ import {
     GQLError,
   } from "https://deno.land/x/oak_graphql/mod.ts";
 
+  
   import{resolvers} from "../Practica_3/resolves.ts"
   import{types} from "../Practica_3/types.ts"
   const app = new Application();
@@ -18,7 +19,7 @@ import {
     typeDefs: types,
     resolvers: resolvers,
   });
-  
+
   app.use(GraphQLService.routes(), GraphQLService.allowedMethods());
   
   console.log("Server start at http://localhost:4000");
