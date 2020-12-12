@@ -6,7 +6,4 @@
       "https://deno.land": true
     },
     "deno.import_intellisense_autodiscovery": true,
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
   }

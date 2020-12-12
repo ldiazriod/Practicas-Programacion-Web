@@ -4,7 +4,6 @@ import { graphql, GraphQLError } from "https://deno.land/x/oak_graphql@0.6.2/dep
 
 import { TaskSchema, UserSchema} from "../mongo/SChema.ts";
 import { Context } from "https://deno.land/x/oak@v6.3.1/context.ts";
-import { readHeaders } from "https://deno.land/x/oak@v6.2.0/headers.ts";
 
 interface IAddTaskArgs {
     task: {
