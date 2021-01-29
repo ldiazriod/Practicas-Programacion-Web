@@ -35,6 +35,8 @@ export interface IBlog{
     comments?: IComment[];
 }
 
+
+
 export interface IContext {
     db:    Database;
     user:  IUser;

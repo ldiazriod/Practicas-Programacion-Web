@@ -207,3 +207,5 @@ const Mutation = {
         }
     },
 };
+
+export {Mutation}
